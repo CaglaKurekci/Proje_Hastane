@@ -31,7 +31,7 @@ namespace Proje_Hastane
         {
             FrmHastaGiris fr = new FrmHastaGiris();
             fr.Show();
-            this.Hide();
+            this.Hide();//test yazısı 
         }
 
         private void BtnDoktorGirisi_Click(object sender, EventArgs e)
