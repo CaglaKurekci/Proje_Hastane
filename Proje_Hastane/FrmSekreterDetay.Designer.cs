@@ -297,6 +297,7 @@
             this.label5.Size = new System.Drawing.Size(64, 29);
             this.label5.TabIndex = 2;
             this.label5.Text = "Saat:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
