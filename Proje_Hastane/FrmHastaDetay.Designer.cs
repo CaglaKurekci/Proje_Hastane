@@ -35,6 +35,8 @@
             this.LblTC = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Txtid = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.LnkBilgiDuzenle = new System.Windows.Forms.LinkLabel();
             this.BtnRandevuAl = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Txtid = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -136,6 +136,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Paneli";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // Txtid
+            // 
+            this.Txtid.Enabled = false;
+            this.Txtid.Location = new System.Drawing.Point(104, 55);
+            this.Txtid.Name = "Txtid";
+            this.Txtid.Size = new System.Drawing.Size(203, 36);
+            this.Txtid.TabIndex = 18;
+            this.Txtid.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(65, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 29);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "id:";
             // 
             // LnkBilgiDuzenle
             // 
@@ -251,23 +269,8 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(839, 233);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 29);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "id:";
-            // 
-            // Txtid
-            // 
-            this.Txtid.Location = new System.Drawing.Point(104, 55);
-            this.Txtid.Name = "Txtid";
-            this.Txtid.Size = new System.Drawing.Size(203, 36);
-            this.Txtid.TabIndex = 18;
-            this.Txtid.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // FrmHastaDetay
             // 

@@ -62,7 +62,13 @@ namespace Proje_Hastane
 
         private void BtnRandevuAl_Click(object sender, EventArgs e)
         {
-
+            SqlCommand komut1 = new SqlCommand("update Tbl_Randevular set RandevuDurum=1,HastaTc=@p1,HastaSikayet=@p2 where Randevuid=@p3", bgl.baglanti());
+            komut1.Parameters.AddWithValue("@p1", LblTC.Text);
+            komut1.Parameters.AddWithValue("@p2", RchSikayet.Text);
+            komut1.Parameters.AddWithValue("@p3", Txtid.Text);
+            komut1.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Randevunuz Oluşturuldu");
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -98,10 +104,21 @@ namespace Proje_Hastane
         private void CmbDoktor_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select *from Tbl_Randevular where RandevuBrans='"+CmbBrans.Text+"'",bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("select *from Tbl_Randevular where RandevuBrans='"+CmbBrans.Text+"'"+"and RandevuDoktor='"+CmbDoktor.Text+"' and RandevuDurum=0",bgl.baglanti());
             da.Fill(dt);
             dataGridView2.DataSource = dt;
 
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView2.SelectedCells[0].RowIndex;
+            Txtid.Text = dataGridView2.Rows[secilen].Cells[0].Value.ToString();
         }
     }
 }

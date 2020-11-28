@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorBilgiDüzenle));
             this.TxtSoyad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtAd = new System.Windows.Forms.TextBox();
@@ -46,7 +47,7 @@
             this.TxtSoyad.Location = new System.Drawing.Point(232, 138);
             this.TxtSoyad.Name = "TxtSoyad";
             this.TxtSoyad.Size = new System.Drawing.Size(216, 36);
-            this.TxtSoyad.TabIndex = 31;
+            this.TxtSoyad.TabIndex = 2;
             // 
             // label4
             // 
@@ -63,7 +64,8 @@
             this.TxtAd.Location = new System.Drawing.Point(232, 81);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Size = new System.Drawing.Size(216, 36);
-            this.TxtAd.TabIndex = 29;
+            this.TxtAd.TabIndex = 1;
+            this.TxtAd.TextChanged += new System.EventHandler(this.TxtAd_TextChanged);
             // 
             // label1
             // 
@@ -76,11 +78,12 @@
             // 
             // MskTC
             // 
+            this.MskTC.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
             this.MskTC.Location = new System.Drawing.Point(232, 295);
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
             this.MskTC.Size = new System.Drawing.Size(216, 36);
-            this.MskTC.TabIndex = 27;
+            this.MskTC.TabIndex = 5;
             // 
             // label2
             // 
@@ -96,7 +99,7 @@
             this.TxtSifre.Location = new System.Drawing.Point(232, 248);
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(216, 36);
-            this.TxtSifre.TabIndex = 33;
+            this.TxtSifre.TabIndex = 4;
             // 
             // label3
             // 
@@ -113,7 +116,7 @@
             this.CmbBrans.Location = new System.Drawing.Point(232, 194);
             this.CmbBrans.Name = "CmbBrans";
             this.CmbBrans.Size = new System.Drawing.Size(216, 36);
-            this.CmbBrans.TabIndex = 34;
+            this.CmbBrans.TabIndex = 3;
             // 
             // label5
             // 
@@ -133,11 +136,14 @@
             this.BtnBilgiGüncelle.TabIndex = 36;
             this.BtnBilgiGüncelle.Text = "Güncelle";
             this.BtnBilgiGüncelle.UseVisualStyleBackColor = false;
+            this.BtnBilgiGüncelle.Click += new System.EventHandler(this.BtnBilgiGüncelle_Click);
             // 
             // FrmDoktorBilgiDüzenle
             // 
+            this.AcceptButton = this.BtnBilgiGüncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(646, 523);
             this.Controls.Add(this.BtnBilgiGüncelle);
@@ -152,9 +158,12 @@
             this.Controls.Add(this.MskTC);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.MaximizeBox = false;
             this.Name = "FrmDoktorBilgiDüzenle";
-            this.Text = "FrmDoktorBilgiDüzenle";
+            this.Text = "Bilgi Düzenle";
+            this.Load += new System.EventHandler(this.FrmDoktorBilgiDüzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

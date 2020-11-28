@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorDetay));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.LblTC = new System.Windows.Forms.Label();
             this.LblAdSoyad = new System.Windows.Forms.Label();
+            this.LblTC = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.RchSikayet = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.BtnGuncelle = new System.Windows.Forms.Button();
-            this.BtnDuyurular = new System.Windows.Forms.Button();
             this.BtnCıkıs = new System.Windows.Forms.Button();
+            this.BtnDuyurular = new System.Windows.Forms.Button();
+            this.BtnGuncelle = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
@@ -63,23 +64,14 @@
             this.groupBox1.Text = "Doktor Bilgi";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label1
+            // LblAdSoyad
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "TC NO:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ad Soyad:";
+            this.LblAdSoyad.AutoSize = true;
+            this.LblAdSoyad.Location = new System.Drawing.Point(151, 103);
+            this.LblAdSoyad.Name = "LblAdSoyad";
+            this.LblAdSoyad.Size = new System.Drawing.Size(100, 29);
+            this.LblAdSoyad.TabIndex = 3;
+            this.LblAdSoyad.Text = "Null Null";
             // 
             // LblTC
             // 
@@ -91,14 +83,23 @@
             this.LblTC.Text = "00000000000";
             this.LblTC.Click += new System.EventHandler(this.label3_Click);
             // 
-            // LblAdSoyad
+            // label2
             // 
-            this.LblAdSoyad.AutoSize = true;
-            this.LblAdSoyad.Location = new System.Drawing.Point(151, 103);
-            this.LblAdSoyad.Name = "LblAdSoyad";
-            this.LblAdSoyad.Size = new System.Drawing.Size(100, 29);
-            this.LblAdSoyad.TabIndex = 3;
-            this.LblAdSoyad.Text = "Null Null";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 29);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ad Soyad:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(60, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "TC NO:";
             // 
             // groupBox2
             // 
@@ -130,15 +131,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Hızlı Erişim";
             // 
-            // BtnGuncelle
+            // BtnCıkıs
             // 
-            this.BtnGuncelle.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.BtnGuncelle.Location = new System.Drawing.Point(24, 48);
-            this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(164, 59);
-            this.BtnGuncelle.TabIndex = 0;
-            this.BtnGuncelle.Text = "Bilgi Düzenle";
-            this.BtnGuncelle.UseVisualStyleBackColor = false;
+            this.BtnCıkıs.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BtnCıkıs.Location = new System.Drawing.Point(24, 125);
+            this.BtnCıkıs.Name = "BtnCıkıs";
+            this.BtnCıkıs.Size = new System.Drawing.Size(332, 59);
+            this.BtnCıkıs.TabIndex = 3;
+            this.BtnCıkıs.Text = "Çıkış";
+            this.BtnCıkıs.UseVisualStyleBackColor = false;
+            this.BtnCıkıs.Click += new System.EventHandler(this.BtnCıkıs_Click);
             // 
             // BtnDuyurular
             // 
@@ -149,16 +151,18 @@
             this.BtnDuyurular.TabIndex = 1;
             this.BtnDuyurular.Text = "Duyurular";
             this.BtnDuyurular.UseVisualStyleBackColor = false;
+            this.BtnDuyurular.Click += new System.EventHandler(this.BtnDuyurular_Click);
             // 
-            // BtnCıkıs
+            // BtnGuncelle
             // 
-            this.BtnCıkıs.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.BtnCıkıs.Location = new System.Drawing.Point(24, 125);
-            this.BtnCıkıs.Name = "BtnCıkıs";
-            this.BtnCıkıs.Size = new System.Drawing.Size(332, 59);
-            this.BtnCıkıs.TabIndex = 3;
-            this.BtnCıkıs.Text = "Çıkış";
-            this.BtnCıkıs.UseVisualStyleBackColor = false;
+            this.BtnGuncelle.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BtnGuncelle.Location = new System.Drawing.Point(24, 48);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(164, 59);
+            this.BtnGuncelle.TabIndex = 0;
+            this.BtnGuncelle.Text = "Bilgi Düzenle";
+            this.BtnGuncelle.UseVisualStyleBackColor = false;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // groupBox4
             // 
@@ -173,6 +177,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 32);
@@ -180,11 +185,13 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(795, 664);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // FrmDoktorDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1193, 713);
             this.Controls.Add(this.groupBox4);
@@ -192,9 +199,12 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmDoktorDetay";
-            this.Text = "DoktorDetay";
+            this.Text = "Doktor Detay";
+            this.Load += new System.EventHandler(this.FrmDoktorDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
