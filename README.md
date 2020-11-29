@@ -1,5 +1,5 @@
 "# Proje_Hastane" 
-C# dili kullanılarak Hastane Randevu otomasyonu yapıldı. Ssms veritabanı kullanıldı ve proje için gerekli olan 6 adet tablo oluşturuldu. Otomasyon Hasta, Doktor ve Sekreter olmak üzere üç farklı girişe sahiptir, seçilen girişlere göre detaylar;
+C# dili kullanılarak Hastane Randevu otomasyonu yapıldı. Mssql veritabanı kullanıldı ve proje için gerekli olan 6 adet tablo oluşturuldu. Otomasyon Hasta, Doktor ve Sekreter olmak üzere üç farklı girişe sahiptir, seçilen girişlere göre detaylar;
 
 1-Hasta Giriş;
 Hasta, kayıt değilse giriş ekranında üye ol ile üye olabilir.
